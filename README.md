@@ -1,16 +1,15 @@
-# Twilio Consent Management 
+# Twilio OneTrust CMP Integration
 
-This plugin provides the framework for Consent Management Platform (CMP) SDKs like OneTrust to supply consent status and potential block events going to device mode destinations.
-
+This plugin provides the integration points for the OneTrust CMP SDK.
 
 
 
 ## Getting Started
 
-To get started add the dependency for consent management to your app's build.gradle file:
+To get started add the dependency for OneTrust CMP consent integration to your app's build.gradle file:
 
 ```groovy
-    implementation 'com.segment.analytics.kotlin.destinations:consent:<LATEST_VERSION>'
+    implementation 'com.segment.analytics.kotlin.destinations:consent-onetrust:<LATEST_VERSION>'
 ```
 
 
