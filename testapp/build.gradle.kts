@@ -37,6 +37,12 @@ android {
 dependencies {
     implementation(project(mapOf("path" to ":lib")))
 
+    implementation("com.segment.analytics.kotlin.destinations:consent:1.0.0-SNAPSHOT")
+    implementation("com.segment.analytics.kotlin:android:1.13.1")
+    implementation("com.onetrust.cmp:native-sdk:202303.2.0.0")
+    implementation("com.squareup.okhttp3:okhttp:4.10.0")
+    implementation(project(":lib"))
+
     implementation("androidx.core:core-ktx:1.10.1")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.6.0")
