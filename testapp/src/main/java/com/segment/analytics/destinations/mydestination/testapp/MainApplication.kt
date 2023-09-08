@@ -50,8 +50,8 @@ class MainApplication: Application() {
             )
         }
 
-        // List of categories we care about: Must be configured on the Segment
-        // web app.
+        // List of categories we care about; we will query OneTrust SDK locally on the status
+        // of these categories when stamping an event with consent status.
         val categories = listOf<String>("C0001", "C0002")
         val consentCategoryProvider = OneTrustConsentCategoryProvider(otPublishersHeadlessSDK, categories)
         val store = SynchronousStore()

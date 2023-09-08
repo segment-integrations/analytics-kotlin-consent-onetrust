@@ -2,7 +2,9 @@
 
 This plugin provides the integration points for the OneTrust CMP SDK.
 
+For more information on on Segment Managed CMP, including how to use this integration, check out the analytics-kotlin-consent repo: 
 
+[https://github.com/segment-integrations/analytics-kotlin-consent](https://github.com/segment-integrations/analytics-kotlin-consent).
 
 ## Getting Started
 
@@ -11,7 +13,6 @@ To get started add the dependency for OneTrust CMP consent integration to your a
 ```groovy
     implementation 'com.segment.analytics.kotlin.destinations:consent-onetrust:<LATEST_VERSION>'
 ```
-
 
 
 ## License
