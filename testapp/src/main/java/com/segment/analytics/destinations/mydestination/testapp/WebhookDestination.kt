@@ -3,6 +3,7 @@ package com.segment.analytics.destinations.mydestination.testapp
 import android.util.Log
 import com.segment.analytics.kotlin.core.*
 import com.segment.analytics.kotlin.core.platform.DestinationPlugin
+import com.segment.analytics.kotlin.core.platform.EventPlugin
 import com.segment.analytics.kotlin.core.platform.Plugin
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -15,9 +16,7 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
 
-class WebhookPlugin(
-    private val webhookUrl: String
-) : DestinationPlugin() {
+class WebhookPlugin(val webhookUrl: String) : DestinationPlugin() {
     override val key: String = "Webhook"
     override lateinit var analytics: Analytics
     val JSON = "application/json; charset=utf-8".toMediaType()

@@ -5,8 +5,11 @@ import com.segment.analytics.kotlin.destinations.consent.ConsentCategoryProvider
 
 class OneTrustConsentCategoryProvider(
     val otPublishersHeadlessSDK: OTPublishersHeadlessSDK,
-    val categories: List<String>
+    var categories: List<String> = emptyList()
 ) : ConsentCategoryProvider {
+
+
+
 
     override fun getCategories(): Map<String, Boolean> {
         var categoryConsentMap = HashMap<String, Boolean>()
@@ -22,5 +25,9 @@ class OneTrustConsentCategoryProvider(
         }
 
         return categoryConsentMap
+    }
+
+    override fun setCategoryList(categories: List<String>) {
+        this.categories = categories
     }
 }

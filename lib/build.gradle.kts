@@ -40,9 +40,9 @@ android {
 
 dependencies {
     implementation("com.segment:sovran-kotlin:1.3.1")
-    implementation("com.segment.analytics.kotlin:android:1.13.1")
-    implementation("com.segment.analytics.kotlin.destinations:consent:1.0.0-SNAPSHOT")
-    implementation("androidx.multidex:multidex:2.0.1")
+    implementation("com.segment.analytics.kotlin:android:1.14.0")
+    implementation("com.segment.analytics.kotlin.destinations:consent:1.2.2")
+        implementation("androidx.multidex:multidex:2.0.1")
     implementation("androidx.core:core-ktx:1.10.1")
     implementation("androidx.lifecycle:lifecycle-process:2.6.1")
     implementation("androidx.lifecycle:lifecycle-common-java8:2.6.1")
