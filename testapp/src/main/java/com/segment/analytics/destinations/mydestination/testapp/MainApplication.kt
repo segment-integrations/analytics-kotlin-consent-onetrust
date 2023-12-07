@@ -28,18 +28,11 @@ class MainApplication : Application() {
         lateinit var otPublishersHeadlessSDK: OTPublishersHeadlessSDK
 
         // Update these:
-//        private const val SEGMENT_WRITE_KEY = "<Your Segment WRITEKEY>"
-//        const val DOMAIN_URL  = "<Your OneTrust Domain URL>"
-//        const val DOMAIN_ID   = "<Your OneTrust Domain ID>"
-//        const val WEBHOOK_URL = "<Your webhook.site webhook url>"
+        private const val SEGMENT_WRITE_KEY = "<Your Segment WRITEKEY>"
+        const val DOMAIN_URL  = "<Your OneTrust Domain URL>"
+        const val DOMAIN_ID   = "<Your OneTrust Domain ID>"
+        const val WEBHOOK_URL = "<Your webhook.site webhook url>"
 
-
-        private const val SEGMENT_WRITE_KEY = "Iqc4U4x6130y1XFCLIP40N3WSTHXkTPz"
-        const val DOMAIN_URL = "cdn.cookielaw.org"
-//        const val DOMAIN_ID = "72eadd89-8bfb-4d82-aed4-20a33299b6d1-test"
-        const val DOMAIN_ID = "14747048-7048-4b70-9aab-d1862f43f034-test"
-//        const val DOMAIN_ID = "foo"
-        const val WEBHOOK_URL = "https://webhook.site/9bbdf672-fd47-4235-8c81-922bc7145f22"
 
 
         const val LANGUAGE_CODE = "en"

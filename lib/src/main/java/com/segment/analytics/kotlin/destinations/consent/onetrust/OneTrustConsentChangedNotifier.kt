@@ -5,13 +5,13 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import com.onetrust.otpublishers.headless.Public.Keys.OTBroadcastServiceKeys
-import com.segment.analytics.kotlin.destinations.consent.ConsentManagementPlugin
+import com.segment.analytics.kotlin.destinations.consent.ConsentManager
 import java.lang.ref.WeakReference
 
 class OneTrustConsentChangedNotifier(
     val contextReference: WeakReference<Context>,
     val categories: List<String>,
-    val consentPlugin: ConsentManagementPlugin
+    val consentPlugin: ConsentManager
 ) {
 
     private val consentChangedReceiver: BroadcastReceiver? = null
@@ -41,7 +41,7 @@ class OneTrustConsentChangedNotifier(
     }
 }
 
-class OneTrustConsentChangedReceiver(val consentPlugin: ConsentManagementPlugin) :
+class OneTrustConsentChangedReceiver(val consentPlugin: ConsentManager) :
     BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
         consentPlugin.notifyConsentChanged()
