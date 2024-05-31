@@ -59,8 +59,6 @@ class MainApplication : Application() {
 
         appContext = this
 
-
-
         Analytics.debugLogsEnabled = true
         analytics = Analytics(SEGMENT_WRITE_KEY, applicationContext) {
             this.collectDeviceId = true
@@ -71,7 +69,6 @@ class MainApplication : Application() {
                 FrequencyFlushPolicy(5000) // Flush after 5 Seconds
             )
         }
-
 
         analytics.add(WebhookPlugin(WEBHOOK_URL))
 
@@ -102,6 +99,11 @@ class MainApplication : Application() {
 
                     Log.d(TAG, "Setting up Analytics with categories: ${categories}")
                     consentCategoryProvider.setCategoryList(categories)
+
+                    // This call starts the events following through the ConsentManagement Plugin
+                    // The plugin will BLOCK all events until start() is called. Here we do it after
+                    // we have gotten valid information from OneTrust, so you MUST enter valid OneTrust
+                    // Configuration information for events to flow.
                     consentPlugin.start()
                 }
 
