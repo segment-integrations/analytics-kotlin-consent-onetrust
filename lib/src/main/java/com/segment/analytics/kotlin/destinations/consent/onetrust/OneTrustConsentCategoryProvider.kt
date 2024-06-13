@@ -1,7 +1,7 @@
 package com.segment.analytics.kotlin.destinations.consent.onetrust
 
 import com.onetrust.otpublishers.headless.Public.OTPublishersHeadlessSDK
-import com.segment.analytics.kotlin.destinations.consent.ConsentCategoryProvider
+import com.segment.analytics.kotlin.consent.ConsentCategoryProvider
 
 class OneTrustConsentCategoryProvider(
     val otPublishersHeadlessSDK: OTPublishersHeadlessSDK,

@@ -5,7 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import com.onetrust.otpublishers.headless.Public.Keys.OTBroadcastServiceKeys
-import com.segment.analytics.kotlin.destinations.consent.ConsentManager
+import com.segment.analytics.kotlin.consent.ConsentManager
 import java.lang.ref.WeakReference
 
 class OneTrustConsentChangedNotifier(

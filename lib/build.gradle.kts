@@ -41,7 +41,7 @@ android {
 }
 
 dependencies {
-    implementation("com.segment.analytics.kotlin.destinations:consent:1.4.0")
+    implementation("com.segment.analytics.kotlin:consent:1.5.2")
     implementation("androidx.multidex:multidex:2.0.1")
     implementation("androidx.core:core-ktx:1.10.1")
     implementation("androidx.lifecycle:lifecycle-process:2.6.1")

@@ -10,7 +10,7 @@ import com.segment.analytics.kotlin.android.Analytics
 import com.segment.analytics.kotlin.core.Analytics
 import com.segment.analytics.kotlin.core.platform.policies.CountBasedFlushPolicy
 import com.segment.analytics.kotlin.core.platform.policies.FrequencyFlushPolicy
-import com.segment.analytics.kotlin.destinations.consent.ConsentManager
+import com.segment.analytics.kotlin.consent.ConsentManager
 import com.segment.analytics.kotlin.destinations.consent.onetrust.OneTrustConsentCategoryProvider
 import org.json.JSONException
 import org.json.JSONObject
