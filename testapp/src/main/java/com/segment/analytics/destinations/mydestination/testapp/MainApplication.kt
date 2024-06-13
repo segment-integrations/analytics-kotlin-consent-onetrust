@@ -81,6 +81,15 @@ class MainApplication : Application() {
 
         analytics.add(consentPlugin)
 
+        // This is commented out because before we start allowing events to flow
+        // we want to make sure that our CMP OneTrust has started and we're able
+        // to get the current consent settings from it.
+        //
+        // See below where we call this function inside the OneTrust success
+        // callback.
+        //
+        // consentPlugin.start()
+
         otPublishersHeadlessSDK.startSDK(
             DOMAIN_URL,
             DOMAIN_ID,
