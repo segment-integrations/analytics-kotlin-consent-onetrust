@@ -12,7 +12,7 @@ android {
     compileSdk = 33
     buildToolsVersion = "33.0.0"
 
-    namespace = "com.segment.analytics.kotlin.destinations.consent.onetrust"
+    namespace = "com.segment.analytics.kotlin.consent.onetrust"
 
     defaultConfig {
         multiDexEnabled = true

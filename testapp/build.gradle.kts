@@ -5,9 +5,9 @@ plugins {
 
 android {
     compileSdk = 33
-    namespace = "com.segment.analytics.destinations.mydestination.testapp"
+    namespace = "com.segment.analytics.consent.onetrust.testapp"
     defaultConfig {
-        applicationId = "com.segment.analytics.destinations.mydestination.testapp"
+        applicationId = "com.segment.analytics.consent.onetrust.testapp"
         minSdk = 24
         targetSdk = 33
         versionCode = 1

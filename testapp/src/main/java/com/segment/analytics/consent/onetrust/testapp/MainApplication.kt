@@ -1,4 +1,4 @@
-package com.segment.analytics.destinations.mydestination.testapp
+package com.segment.analytics.consent.onetrust.testapp
 
 import android.app.Application
 import android.content.Context
@@ -11,7 +11,7 @@ import com.segment.analytics.kotlin.core.Analytics
 import com.segment.analytics.kotlin.core.platform.policies.CountBasedFlushPolicy
 import com.segment.analytics.kotlin.core.platform.policies.FrequencyFlushPolicy
 import com.segment.analytics.kotlin.consent.ConsentManager
-import com.segment.analytics.kotlin.destinations.consent.onetrust.OneTrustConsentCategoryProvider
+import com.segment.analytics.kotlin.consent.onetrust.OneTrustConsentCategoryProvider
 import org.json.JSONException
 import org.json.JSONObject
 import sovran.kotlin.SynchronousStore
@@ -100,11 +100,11 @@ class MainApplication : Application() {
                 override fun onSuccess(otSuccessResponse: OTResponse) {
                     // do logic to render UI getOTSDKData();
                     val otData =
-                        MainApplication.otPublishersHeadlessSDK.bannerData.toString()
+                        otPublishersHeadlessSDK.bannerData.toString()
                     Log.d(TAG, "OT onSuccess: otData: $otData")
 
                     val categories =
-                        getGroupIds(MainApplication.otPublishersHeadlessSDK.domainGroupData)
+                        getGroupIds(otPublishersHeadlessSDK.domainGroupData)
 
                     Log.d(TAG, "Setting up Analytics with categories: ${categories}")
                     consentCategoryProvider.setCategoryList(categories)

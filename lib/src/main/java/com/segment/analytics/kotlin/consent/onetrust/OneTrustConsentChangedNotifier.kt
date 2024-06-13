@@ -1,4 +1,4 @@
-package com.segment.analytics.kotlin.destinations.consent.onetrust
+package com.segment.analytics.kotlin.consent.onetrust
 
 import android.content.BroadcastReceiver
 import android.content.Context
