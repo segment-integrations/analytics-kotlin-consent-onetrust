@@ -5,9 +5,9 @@ plugins {
 
 android {
     compileSdk = 33
-    namespace = "com.segment.analytics.destinations.mydestination.testapp"
+    namespace = "com.segment.analytics.consent.onetrust.testapp"
     defaultConfig {
-        applicationId = "com.segment.analytics.destinations.mydestination.testapp"
+        applicationId = "com.segment.analytics.consent.onetrust.testapp"
         minSdk = 24
         targetSdk = 33
         versionCode = 1
@@ -37,11 +37,10 @@ android {
 dependencies {
     implementation(project(mapOf("path" to ":lib")))
 
-    implementation("com.segment.analytics.kotlin.destinations:consent:1.4.0")
+    implementation("com.segment.analytics.kotlin:consent:1.5.2")
 
     implementation("com.onetrust.cmp:native-sdk:202309.1.0.0")
     implementation("com.squareup.okhttp3:okhttp:4.10.0")
-    implementation("com.segment.analytics.kotlin:destination-filters:0.1.1")
     implementation(project(":lib"))
 
     implementation("androidx.core:core-ktx:1.10.1")

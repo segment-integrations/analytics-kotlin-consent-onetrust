@@ -11,7 +11,7 @@ For more information on on Segment Managed CMP, including how to use this integr
 To get started add the dependency for OneTrust CMP consent integration to your app's build.gradle file:
 
 ```groovy
-    implementation 'com.segment.analytics.kotlin.destinations:consent-onetrust:<LATEST_VERSION>'
+    implementation 'com.segment.analytics.kotlin.consent:consent-onetrust:<LATEST_VERSION>'
 ```
 
 

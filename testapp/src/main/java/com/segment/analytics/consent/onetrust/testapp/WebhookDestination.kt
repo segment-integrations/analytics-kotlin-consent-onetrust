@@ -1,4 +1,4 @@
-package com.segment.analytics.destinations.mydestination.testapp
+package com.segment.analytics.consent.onetrust.testapp
 
 import android.util.Log
 import com.segment.analytics.kotlin.core.*
@@ -21,7 +21,7 @@ class WebhookPlugin(val webhookUrl: String) : DestinationPlugin() {
     override lateinit var analytics: Analytics
     val JSON = "application/json; charset=utf-8".toMediaType()
     val okHttpClient = OkHttpClient()
-    private val TAG = MainApplication.TAG  + "/WebhookDestination"
+    private val TAG = MainApplication.TAG + "/WebhookDestination"
 
 
     override fun track(payload: TrackEvent): BaseEvent? {

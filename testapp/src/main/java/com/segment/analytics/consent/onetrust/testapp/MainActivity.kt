@@ -1,4 +1,4 @@
-package com.segment.analytics.destinations.mydestination.testapp
+package com.segment.analytics.consent.onetrust.testapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
