@@ -12,9 +12,11 @@ import com.segment.analytics.kotlin.core.platform.policies.CountBasedFlushPolicy
 import com.segment.analytics.kotlin.core.platform.policies.FrequencyFlushPolicy
 import com.segment.analytics.kotlin.consent.ConsentManager
 import com.segment.analytics.kotlin.consent.onetrust.OneTrustConsentCategoryProvider
+import com.segment.analytics.kotlin.consent.onetrust.OneTrustConsentChangedNotifier
 import org.json.JSONException
 import org.json.JSONObject
 import sovran.kotlin.SynchronousStore
+import java.lang.ref.WeakReference
 
 class MainApplication : Application() {
 
@@ -23,6 +25,7 @@ class MainApplication : Application() {
         var appContext: Context? = null
             private set
         lateinit var analytics: Analytics
+        var notifier: OneTrustConsentChangedNotifier? = null
 
         var haveShownOTBanner = false
         lateinit var otPublishersHeadlessSDK: OTPublishersHeadlessSDK
@@ -108,6 +111,18 @@ class MainApplication : Application() {
 
                     Log.d(TAG, "Setting up Analytics with categories: ${categories}")
                     consentCategoryProvider.setCategoryList(categories)
+
+                    // The notifier is used to tell the consent plugin that consent has changed.
+                    // OneTrust sends out a Broadcast Intent when consent changes. The notifier
+                    // can be used to start (.register()) or stop (.unregister()) listening for
+                    // those broadcast. For app, we'll just start it once and not stop it to make
+                    // sure we we're listening no matter which activity is using the OneTrust UI.
+                    notifier = OneTrustConsentChangedNotifier(
+                        WeakReference(this@MainApplication),
+                        categories,
+                        consentPlugin)
+
+                    notifier?.register()
 
                     // This call starts the events following through the ConsentManagement Plugin
                     // The plugin will BLOCK all events until start() is called. Here we do it after
