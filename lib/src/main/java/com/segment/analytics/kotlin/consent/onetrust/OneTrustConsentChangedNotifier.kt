@@ -4,6 +4,7 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
+import android.util.Log
 import com.onetrust.otpublishers.headless.Public.Keys.OTBroadcastServiceKeys
 import com.segment.analytics.kotlin.consent.ConsentManager
 import java.lang.ref.WeakReference

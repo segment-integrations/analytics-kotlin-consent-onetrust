@@ -1,6 +1,6 @@
 # Twilio OneTrust CMP Integration
 
-This plugin provides the integration points for the OneTrust CMP SDK.
+This plugin provides an EXAMPLE integration for the OneTrust CMP SDK.
 
 For more information on on Segment Managed CMP, including how to use this integration, check out the analytics-kotlin-consent repo: 
 
