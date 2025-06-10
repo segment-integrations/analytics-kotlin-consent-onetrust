@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.util.Log
+import androidx.core.content.ContextCompat
 import com.onetrust.otpublishers.headless.Public.Keys.OTBroadcastServiceKeys
 import com.segment.analytics.kotlin.consent.ConsentManager
 import java.lang.ref.WeakReference
@@ -26,9 +27,11 @@ class OneTrustConsentChangedNotifier(
         categories.forEach {
 
             if (context != null) {
-                context.registerReceiver(
+                ContextCompat.registerReceiver(
+                    context,
                     OneTrustConsentChangedReceiver(consentPlugin),
-                    IntentFilter(OTBroadcastServiceKeys.OT_CONSENT_UPDATED)
+                    IntentFilter(OTBroadcastServiceKeys.OT_CONSENT_UPDATED),
+                    ContextCompat.RECEIVER_NOT_EXPORTED
                 )
             }
         }
